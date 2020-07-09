@@ -1,0 +1,40 @@
+/*             Global                              */
+body {
+   background-color: #f3f2ee;
+   font-size: 18px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+h1 {
+   font-family: monospace;
+   margin-bottom: 50px;
+}
+
+
+/*             Input Numbers                              */
+div.form-row {
+   display: table-row;
+}
+label, input {
+   display: table-cell;
+   margin-bottom: 10px;
+}
+label {
+   padding-right: 10px;
+}
+input {
+   height: 20px;
+
+}
+
+
+/*             Result Table                             */
+table.result {
+   margin-top: 30px;
+}
+
+th, td {
+   padding:  10px 10px 10px 0px;
+}

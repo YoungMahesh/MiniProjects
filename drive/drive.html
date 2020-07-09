@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Drive Download Link</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+
+   <body>
+      <h2 class="heading">Google_drive, Onedrive, Dropbox, Github direct download link</h2>
+      <p>
+         If you want to process multiple links at once, then add each link on new
+         line.
+      </p>
+
+
+      <table>
+         <tbody>
+            <tr>
+               <td>Google_Drive</td>
+               <td>Paste "Share-link"</td>
+            </tr>
+            <tr>
+               <td>Dropbox</td>
+               <td>Paste "Share-link"</td>
+            </tr>
+            <tr>
+               <td>OneDrive</td>
+               <td>Paste "Embed-link"</td>
+            </tr>
+            <tr>
+               <td>Github</td>
+               <td>Paste "URL-link" in browser</td>
+            </tr>
+         </tbody>
+      </table>
+
+
+      <textarea name="textarea" id="inputArea" rows="15" cols="50" placeholder="Paste your file 'share links' here."></textarea>
+      <button onclick="convertToDownloadLink()">Submit</button>
+      <br /><br /><br />
+
+      <textarea id="outputArea" rows="15" cols="50" readonly
+         placeholder="You will display direct download links here."></textarea>
+      <button onclick="copyText()">Copy</button>
+      <br /><br /><br />
+
+      <script src="./to_direct_link.js"></script>
+   </body>
+
+</html>

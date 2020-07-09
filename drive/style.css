@@ -1,0 +1,24 @@
+body {
+   background-color: #f3f2ee;
+   font-size: 18px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.heading {
+   font-family: monospace;
+   color: peru;
+}
+
+table {
+   margin: 20px 0px;
+}
+
+td {
+   padding: 5px;
+   border: 1px solid black;
+   text-align: left;
+}

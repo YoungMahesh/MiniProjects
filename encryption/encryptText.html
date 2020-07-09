@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Encrypt-Decrypt Text</title>
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+
+   <body>
+      <h2 class="heading">Encrypt-Decrypt Text</h2>
+
+      <main>
+         <div class="encryption-area">
+            <h4> Encrypt Text </h4>
+            <div class="area">
+               <textarea name="textarea" class="largeArea" id="inputText" placeholder="Paste your Normal-text here."></textarea>
+               <button onclick="encryptText()">Submit</button>
+               <button onclick="clearText()">Clear</button>
+            </div>
+
+            <div class="area">
+               <textarea id="outputEncrypted" readonly
+                  placeholder="You will display Encrypted-text here."></textarea>
+               <button onclick="copyEncrypted()">Copy</button>
+            </div>
+         </div>
+
+         <br /> <br />
+
+
+         <div class="decryption-area">
+            <h4>Decrypt Text</h4>
+            <div class="area">
+               <textarea name="textarea" id="inputEncrypted" placeholder="Paste your Encrypted-text here."></textarea>
+               <button onclick="decryptText()">Submit</button>
+               <button onclick="clearDecrypt()">Clear</button>
+            </div>
+
+            <div class="area">
+               <textarea id="outputText" class="largeArea" readonly
+               placeholder="You will display Decrypted-text here."></textarea>
+            <button onclick="copyDecrypted()">Copy</button>
+            </div>
+         </div>
+
+         <br /> <br />
+      </main>
+
+
+      <script src="./encrypt.js"></script>
+   </body>
+
+</html>
