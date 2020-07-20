@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Dropbox File Hosting</title>
+   <link rel='stylesheet' href='../global.css' />
+   <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+   <h2>Dropbox File-Sharing-Link to File-Hosting-Link</h2>
+   <p>
+      You can host your own 'style.css' or 'script.js' as CDN to your website.
+   </p>
+   <p>
+      If you want to process multiple links at once, then add each link on new
+      line.
+   </p>
+
+
+   <textarea name="textarea" id="inputArea" rows="15" cols="50"
+      placeholder="Paste your file 'dropbox share links' here."></textarea>
+   <button onclick="convertToHostingLink()">Submit</button>
+   <br /><br /><br />
+
+   <textarea id="outputArea" rows="15" cols="50" readonly
+      placeholder="You will display 'file hosting links' here."></textarea>
+   <button onclick="copyText()">Copy</button>
+   <br /><br /><br />
+
+   <script src="./to_hosting_link.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+@import url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+body {
+   font-family: 'PT Serif', sans-serif;
+   background-color: #f3f2ee;
+   font-size: 18px;
+   padding: 20px;
+}
+
+textarea {
+   margin-top: 40px;
+}
+
+button {
+   margin: 20px;
+   font-size: medium;
+   padding: 5px;
+}
