@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Direct Download Link</title>
+		<link rel="stylesheet" href="../global.css" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
 
-<head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Direct Download Link</title>
-   <link rel='stylesheet' href='../global.css' />
-   <link rel="stylesheet" href="./style.css" />
-</head>
+	<body>
+		<h1>Get Direct Download Links</h1>
+		<main>
+			<article>
+				<p>
+					If you want to process multiple links at once, then add each link
+					on new line.
+				</p>
 
-<body>
-   <h2>Get Direct Download Links</h2>
-   <p>
-      If you want to process multiple links at once, then add each link on new
-      line.
-   </p>
+				<div class="note">
+					<h3>While pasting any link consider following:</h3>
+					<ul>
+						<li>For Google-Drive: Paste 'Share-link'</li>
+					</ul>
+					<ul>
+						<li>For Dropbox: Paste 'Share-link'</li>
+					</ul>
+					<ul>
+						<li>For OneDrive: Paste 'Embed-link'</li>
+					</ul>
+					<ul>
+						<li>For Github: Paste 'Url-link'</li>
+					</ul>
+				</div>
 
+				<div class="note">
+					<h3>
+						In case of Dropbox you get two-urls for each link -
+					</h3>
+					<ol>
+						<li>Direct-Download URL</li>
+						<li>File-Hosting URL</li>
+					</ol>
+				</div>
+			</article>
 
-   <table>
-      <tbody>
-         <tr>
-            <td>Google-Drive</td>
-            <td>Paste "Share-link"</td>
-         </tr>
-         <tr>
-            <td>Dropbox</td>
-            <td>Paste "Share-link"</td>
-         </tr>
-         <tr>
-            <td>OneDrive</td>
-            <td>Paste "Embed-link"</td>
-         </tr>
-         <tr>
-            <td>Github</td>
-            <td>Paste "URL-link"</td>
-         </tr>
-      </tbody>
-   </table>
+			<section>
+				<div class="textarea-btn">
+					<textarea
+						name="textarea"
+						id="inputArea"
+						placeholder="Paste your file 'share links' here."
+					></textarea>
+					<div class="btn-group">
+						<button onclick="convertToDownloadLink()">Submit</button>
+					</div>
+				</div>
 
+				<div class="textarea-btn">
+					<textarea
+						id="outputArea"
+						readonly
+						placeholder="You will display 'direct download links' here."
+					></textarea>
+					<div class="btn-group">
+						<button onclick="copyText()">Copy</button>
+					</div>
+				</div>
+			</section>
+		</main>
 
-   <textarea name="textarea" id="inputArea" rows="15" cols="50"
-      placeholder="Paste your file 'share links' here."></textarea>
-   <button onclick="convertToDownloadLink()">Submit</button>
-   <br /><br /><br />
-
-   <textarea id="outputArea" rows="15" cols="50" readonly
-      placeholder="You will display 'direct download links' here."></textarea>
-   <button onclick="copyText()">Copy</button>
-   <br /><br /><br />
-
-   <script src="./to_direct_link.js"></script>
-</body>
-
+		<script src="./to_direct_link.js"></script>
+	</body>
 </html>
