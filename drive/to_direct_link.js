@@ -52,7 +52,7 @@ const modifyOnedriveLink = (rawLink) => {
 }
 
 const modifyDropboxLink = (rawLink) => {
-	const downloadLink = rawLink.replace(RgxDropboxReplace1, 'raw=1')
+	const downloadLink = rawLink.replace(RgxDropboxReplace1, 'dl=1')
 	const hostingLink = rawLink
 		.replace(RgxDropboxReplace2, '//dl.')
 		.replace(RgxDropboxReplace3, '')
