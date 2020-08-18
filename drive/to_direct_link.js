@@ -24,8 +24,7 @@ const outputArea = document.getElementById('outputArea')
    https://github.com/YoungMahesh/files-hosting/blob/master/window1.jpg
 */
 
-const RgxGoogledrive1 = /^https:\/\/drive.google.com\/open\?id=(.+)$/
-const RgxGoogledrive2 = /^https:\/\/drive.google.com\/file\/d\/(.+)\/view\?usp=sharing$/
+const RgxGoogledrive = /^https:\/\/drive.google.com\/file\/d\/(.+)\/view\?usp=sharing$/
 const RgxOnedrive1 = /^<iframe src="(.+)" width="\d+"(.+)<\/iframe>$/
 const RgxOnedrive1_1 = /embed/
 const RgxDropbox1 = /^https:\/\/www.dropbox.com\/(.+)dl=0$/
@@ -34,17 +33,17 @@ const RgxDropboxReplace2 = /\/\/www./
 const RgxDropboxReplace3 = /\?dl=0/
 const RgxGithub1 = /^https:\/\/github.com/
 
-const modifyGDriveLink1 = (rawLink1) =>
-	rawLink1.replace(
-		RgxGoogledrive1,
+const modifyGDriveLink = (rawLink2) => {
+	const downloadLink = rawLink2.replace(
+		RgxGoogledrive,
 		(_, fileId) => 'https://drive.google.com/uc?export=download&id=' + fileId
 	)
-
-const modifyGDriveLink2 = (rawLink2) =>
-	rawLink2.replace(
-		RgxGoogledrive2,
-		(_, fileId) => 'https://drive.google.com/uc?export=download&id=' + fileId
+	const hostingLink = rawLink2.replace(
+		RgxGoogledrive,
+		(_, fileId) => 'https://drive.google.com/uc?export=view&id=' + fileId
 	)
+	return downloadLink + '\n' + hostingLink
+}
 
 const modifyOnedriveLink = (rawLink) => {
 	let embedL = rawLink.replace(RgxOnedrive1, (_, embedLink) => embedLink)
@@ -65,9 +64,7 @@ const modifyGithubLink = (rawLink) => {
 
 function modifyLink(rawLink) {
 	let modifiedLink
-	if (RgxGoogledrive1.test(rawLink)) modifiedLink = modifyGDriveLink1(rawLink)
-	else if (RgxGoogledrive2.test(rawLink))
-		modifiedLink = modifyGDriveLink2(rawLink)
+	if (RgxGoogledrive.test(rawLink)) modifiedLink = modifyGDriveLink(rawLink)
 	else if (RgxOnedrive1.test(rawLink))
 		modifiedLink = modifyOnedriveLink(rawLink)
 	else if (RgxDropbox1.test(rawLink)) modifiedLink = modifyDropboxLink(rawLink)
