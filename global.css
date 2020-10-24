@@ -15,26 +15,6 @@ h3 {
 	text-decoration: underline;
 }
 
-textarea {
-	min-width: 300px;
-	min-height: 200px;
-}
-
-button {
-	margin: 20px;
-	font-size: medium;
-	padding: 5px;
-}
-
-textarea,
-button {
-	display: block;
-}
-
-article {
-	margin: 0 0 40px 0;
-}
-
 main {
 	display: flex;
 	align-items: center;
@@ -44,10 +24,38 @@ main {
 
 section {
 	margin: 0 0 40px 0;
-	width: 80vw;
+	width: 90vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+}
+
+.textarea-btn {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+textarea {
+	min-width: 100%;
+	min-height: 250px;
+}
+
+button {
+	margin: 20px;
+	font-size: medium;
+	padding: 5px;
+}
+
+
+textarea,
+button {
+	display: block;
+}
+
+
+article {
+	margin: 0 0 40px 0;
 }
 
 .btn-group {
@@ -58,5 +66,8 @@ section {
 @media screen and (min-width: 800px) {
 	body {
 		font-size: 18px;
+	}
+	textarea {
+		min-height: 400px;
 	}
 }

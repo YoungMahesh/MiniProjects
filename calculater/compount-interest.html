@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Compound Interest Calculator</title>
-   <link rel="stylesheet" href="./style.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Compound Interest Calculator</title>
+	<link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-   <h1>Compound Interest Calculator</h1>
+	<h1>Compound Interest Calculator</h1>
 
-   <div class="form-table">
+	<section>
+		<div class="form-table">
 
-      <div class="form-row">
-         <label for="initial_amount">Initial Amount: </label>
-         <input type="number" id="initial_amount" required/>
-      </div>
+			<div class="form-row">
+				<label for="initial_amount">Initial Amount: </label>
+				<input type="number" id="initial_amount" required />
+			</div>
 
-      <div class="form-row">
-         <label for="interest_rate">Interest Rate: </label>
-         <input type="number" id="interest_rate" required/>
-      </div>
+			<div class="form-row">
+				<label for="interest_rate">Interest Rate: </label>
+				<input type="number" id="interest_rate" required />
+			</div>
 
-      <div class="form-row">
-         <label for="years">No. of Years: </label>
-         <input type="number" id="years1" required/>
-      </div>
+			<div class="form-row">
+				<label for="years">No. of Years: </label>
+				<input type="number" id="years1" required />
+			</div>
 
-      <button id="button1">Submit</button>
+			<button id="button1">Submit</button>
 
-   </form>
+			</form>
 
-   <p id="form-notification"></p>
+			<p id="form-notification"></p>
 
-   <table class="result">
-      <thead>
-         <tr>
-            <th>Year</th>
-            <th>Amount</th>
-            <th>Interest</th>
-            <th>Total</th>
-         </tr>
-      </thead>
-
-      <tbody class="tableBody">
-
-      </tbody>
-   </table>
+	</section>
 
 
+	<section>
+		<table class="result">
+			<thead>
+				<tr>
+					<th>Year</th>
+					<th>Amount</th>
+					<th>Interest</th>
+					<th>Total</th>
+				</tr>
+			</thead>
 
-   <script src="./calculate.js"></script>
+			<tbody class="tableBody">
+
+			</tbody>
+		</table>
+
+	</section>
+
+
+
+	<script src="./calculate.js"></script>
 </body>
+
 </html>
