@@ -1,79 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Direct Download Link</title>
-		<meta name='description' content='Google Drive direct link, Dropbox direct link, Github direct link, Onedrive direct link. Convert Sharing link to direct link' />
-		<link rel="stylesheet" href="../global.css" />
-		<link rel="stylesheet" href="./style.css" />
-	</head>
 
-	<body>
-		<h1>Get Direct Download Links</h1>
-		<main>
-			<article>
-				<p>
-					If you want to process multiple links at once, then add each link
-					on new line.
-				</p>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Direct Download Link</title>
+	<meta name='description'
+		content='Google Drive direct link, Dropbox direct link, Github direct link, Onedrive direct link. Convert Sharing link to direct link' />
+	<link rel="stylesheet" href="../global.css" />
+	<link rel="stylesheet" href="./drive.css" />
+</head>
 
-				<div class="note">
-					<h3>While pasting any link consider following:</h3>
-					<ul>
-						<li>
-							For Google-Drive: Right-Click on file => Copy shareable
-							link
-						</li>
-					</ul>
-					<ul>
-						<li>For Dropbox: Paste 'Share-link'</li>
-					</ul>
-					<ul>
-						<li>For OneDrive: Paste 'Embed-link'</li>
-					</ul>
-					<ul>
-						<li>For Github: Paste 'Url-link'</li>
-					</ul>
-				</div>
+<body>
+	<h1>Get Direct Download Links</h1>
+	<main>
+		<div class='info'>
+			<p>
+				If you want to process multiple links at once, then add each link
+				on new line.
+			</p>
 
-				<div class="note">
-					<h3>
-						In case of 'Google-Drive' and 'Dropbox' you get two-urls for
-						each link -
-					</h3>
-					<ol>
-						<li>Direct-Download URL</li>
-						<li>File-Hosting URL</li>
-					</ol>
-				</div>
-			</article>
 
-			<section>
-				<div class="textarea-btn">
-					<textarea
-						name="textarea"
-						id="inputArea"
-						placeholder="Paste your file 'share links' here."
-					></textarea>
-					<div class="btn-group">
-						<button onclick="convertToDownloadLink()">Submit</button>
-					</div>
-				</div>
+			<h3>While pasting any link consider following:</h3>
+			<ul>
+				<li>
+					For Google-Drive: Right-Click on file => Copy shareable
+					link
+				</li>
+			</ul>
+			<ul>
+				<li>For Dropbox: Paste 'Share-link'</li>
+			</ul>
+			<ul>
+				<li>For OneDrive: Paste 'Embed-link'</li>
+			</ul>
+			<ul>
+				<li>For Github: Paste 'Url-link'</li>
+			</ul>
 
-				<div class="textarea-btn">
-					<textarea
-						id="outputArea"
-						readonly
-						placeholder="You will display 'direct download links' here."
-					></textarea>
-					<div class="btn-group">
-						<button onclick="copyText()">Copy</button>
-					</div>
-				</div>
-			</section>
-		</main>
+			<h3>
+				In case of 'Google-Drive' and 'Dropbox' you get two-urls for
+				each link -
+			</h3>
+			<ol>
+				<li>Direct-Download URL</li>
+				<li>File-Hosting URL</li>
+			</ol>
 
-		<script src="./to_direct_link.js"></script>
-	</body>
+		</div>
+
+		<div class='input-output'>
+
+			<div class='input'>
+				<textarea name="textarea" id="inputArea" placeholder="Paste your file 'share links' here."></textarea>
+
+				<button onclick="convertToDownloadLink()">Submit</button>
+			</div>
+
+			<div class='output'>
+				<textarea id="outputArea" readonly placeholder="You will display 'direct download links' here."></textarea>
+
+				<button onclick="copyText()">Copy</button>
+			</div>
+
+		</div>
+	</main>
+
+	<script src="./to_direct_link.js"></script>
+</body>
+
 </html>

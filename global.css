@@ -1,73 +1,15 @@
-@import url('https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext');
-
 body {
 	font-family: 'PT Serif', sans-serif;
 	background-color: #f3f2ee;
-	font-size: 16px;
-	padding: 20px;
+	font-size: 17px;
+}
+
+button {
+	font-size: 17px;
 }
 
 h1 {
 	text-align: center;
-}
-
-h3 {
-	text-decoration: underline;
-}
-
-main {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-section {
-	margin: 0 0 40px 0;
-	width: 90vw;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-.textarea-btn {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-textarea {
-	min-width: 100%;
-	min-height: 250px;
-}
-
-button {
-	margin: 20px;
-	font-size: medium;
-	padding: 5px;
-}
-
-
-textarea,
-button {
-	display: block;
-}
-
-
-article {
-	margin: 0 0 40px 0;
-}
-
-.btn-group {
-	display: flex;
-	justify-content: flex-end;
-}
-
-@media screen and (min-width: 800px) {
-	body {
-		font-size: 18px;
-	}
-	textarea {
-		min-height: 400px;
-	}
+	font-weight: 400;
+   font-size: 30px;
 }

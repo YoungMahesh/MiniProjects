@@ -1,0 +1,34 @@
+.input-output {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.input, .output {
+	width: 80%;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+}
+
+button {
+	position: absolute;
+	right: 0;
+}
+
+@media screen and (min-width: 700px) {
+	.input-output {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.input, .output {
+		width: 40%;
+	}
+}
